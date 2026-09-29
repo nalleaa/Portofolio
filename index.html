@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nalasyifa Amaranggana — Software Engineering Student & Front-End Developer</title>
+<meta name="description" content="Portofolio Nalasyifa Amaranggana — XI PPLG B SMKN 2 Surakarta. Aspiring Project Manager, Android UI & Front-End Developer, Creative Designer." />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+fontFamily: { sans: ['"Plus Jakarta Sans"','Inter','sans-serif'], display: ['"Space Grotesk"','sans-serif'], mono: ['"JetBrains Mono"','monospace'] },
+animation: { float: 'float 6s ease-in-out infinite', 'float-slow': 'float 9s ease-in-out infinite', blob: 'blob 12s ease-in-out infinite', blink: 'blink 1.1s steps(2) infinite' },
+keyframes: { float: { '0%,100%':{transform:'translateY(0)'}, '50%':{transform:'translateY(-14px)'} }, blob: { '0%,100%':{transform:'translate(0,0) scale(1)'}, '33%':{transform:'translate(24px,-30px) scale(1.08)'}, '66%':{transform:'translate(-20px,20px) scale(.94)'} }, blink: { '50%':{opacity:'0'} } }
+} } }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{background:#08080d;color:#e4e4e7;-webkit-font-smoothing:antialiased}
+::selection{background:#7c3aed;color:#fff}
+.grad-text{background:linear-gradient(92deg,#818cf8,#a78bfa 32%,#22d3ee 78%,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad-bg{background:linear-gradient(135deg,#6366f1,#8b5cf6 45%,#06b6d4)}
+.grad-border{position:relative;background:linear-gradient(#121218,#121218) padding-box,linear-gradient(135deg,#6366f1,#a78bfa,#22d3ee) border-box;border:1px solid transparent}
+.glass{background:rgba(255,255,255,.04);backdrop-filter:blur(18px)}
+.card-hover{transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s}
+.card-hover:hover{transform:translateY(-8px);box-shadow:0 24px 60px -18px rgba(124,58,237,.45)}
+.grid-bg{background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,black 55%,transparent 100%)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.reveal.visible{opacity:1;transform:none}
+.nav-link{position:relative}.nav-link::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;border-radius:99px;background:linear-gradient(90deg,#818cf8,#22d3ee);transition:width .3s}
+.nav-link:hover::after,.nav-link.active::after{width:100%}
+.code-dot{width:11px;height:11px;border-radius:99px}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#0a0a10}::-webkit-scrollbar-thumb{background:linear-gradient(#6366f1,#06b6d4);border-radius:99px}
+</style>
+</head>
+<body class="font-sans overflow-x-hidden">
+<div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+<div class="absolute inset-0 grid-bg"></div>
+<div class="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-indigo-600/25 blur-[120px] animate-blob"></div>
+<div class="absolute top-1/3 -right-40 w-[560px] h-[560px] rounded-full bg-violet-600/20 blur-[130px] animate-blob"></div>
+<div class="absolute bottom-0 left-1/3 w-[480px] h-[480px] rounded-full bg-cyan-500/15 blur-[130px] animate-blob"></div>
+</div>
+<header class="fixed top-0 inset-x-0 z-50">
+<nav aria-label="Navigasi utama" class="max-w-7xl mx-auto px-5 sm:px-8">
+<div class="mt-4 flex items-center justify-between rounded-2xl border border-white/10 bg-[#0c0c13]/80 backdrop-blur-xl px-4 sm:px-6 py-3 shadow-xl">
+<a href="#hero" class="flex items-center gap-3 group">
+<span class="grid place-items-center w-10 h-10 rounded-xl grad-bg font-display font-bold text-white text-lg group-hover:rotate-6 transition-transform">N</span>
+<span class="leading-tight"><span class="block font-display font-bold text-white">Nalasyifa A.</span><span class="block text-[11px] font-mono text-zinc-400 tracking-widest uppercase">dev · design · lead</span></span>
+</a>
+<ul class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
+<li><a class="nav-link hover:text-white transition" href="#hero">Beranda</a></li>
+<li><a class="nav-link hover:text-white transition" href="#about">Tentang</a></li>
+<li><a class="nav-link hover:text-white transition" href="#skills">Keahlian</a></li>
+<li><a class="nav-link hover:text-white transition" href="#projects">Proyek</a></li>
+<li><a class="nav-link hover:text-white transition" href="#contact">Kontak</a></li>
+</ul>
+<div class="hidden md:block"><a href="#contact" class="grad-bg inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-indigo-600/40 hover:-translate-y-0.5 transition-all">Hubungi Saya <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<button id="menu-btn" class="md:hidden grid place-items-center w-10 h-10 rounded-xl border border-white/10 text-zinc-200" aria-label="Buka menu" aria-expanded="false"><svg id="icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg id="icon-close" class="hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+<div id="mobile-menu" class="md:hidden hidden mt-2 rounded-2xl border border-white/10 bg-[#0c0c13]/95 backdrop-blur-xl p-3 shadow-2xl">
+<a href="#hero" class="m-link block px-4 py-3 rounded-xl hover:bg-white/5 text-zinc-200 font-medium">Beranda</a>
+<a href="#about" class="m-link block px-4 py-3 rounded-xl hover:bg-white/5 text-zinc-200 font-medium">Tentang</a>
+<a href="#skills" class="m-link block px-4 py-3 rounded-xl hover:bg-white/5 text-zinc-200 font-medium">Keahlian</a>
+<a href="#projects" class="m-link block px-4 py-3 rounded-xl hover:bg-white/5 text-zinc-200 font-medium">Proyek</a>
+<a href="#contact" class="m-link block px-4 py-3 rounded-xl hover:bg-white/5 text-zinc-200 font-medium">Kontak</a>
+<a href="#contact" class="m-link grad-bg mt-2 block text-center rounded-xl px-4 py-3 font-bold text-white">Hubungi Saya</a>
+</div>
+</nav>
+</header>
+<main>
+<section id="hero" class="relative pt-36 sm:pt-40 pb-16 sm:pb-24 scroll-mt-24">
+<div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-[1.15fr_.85fr] gap-12 items-center">
+<div class="reveal visible">
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[12px] font-semibold px-3.5 py-1.5 rounded-full border border-indigo-400/30 bg-indigo-500/10 text-indigo-200">🎓 PPLG B — SMK Negeri 2 Surakarta</span>
+<span class="text-[12px] font-semibold px-3.5 py-1.5 rounded-full border border-violet-400/30 bg-violet-500/10 text-violet-200">🏛️ Sekretaris Umum MPK 2026/2027</span>
+<span class="text-[12px] font-semibold px-3.5 py-1.5 rounded-full border border-cyan-400/30 bg-cyan-500/10 text-cyan-200">✦ Samsung Innovation Campus Alumni</span>
+</div>
+<p class="font-mono text-sm text-cyan-300 mb-3">~/hello-world<span class="animate-blink">_</span></p>
+<h1 class="font-display font-bold tracking-tight text-white text-4xl sm:text-6xl leading-[1.05]">Hi, saya<br><span class="grad-text">Nalasyifa Amaranggana</span></h1>
+<p class="mt-5 font-medium text-zinc-300 text-base sm:text-lg leading-relaxed max-w-2xl"><span class="text-white font-semibold">11th-Grade Software Engineering Student</span> <span class="text-zinc-500">|</span> Aspiring Project Manager, Android UI &amp; Front-End Developer <span class="text-zinc-500">|</span> Creative Designer</p>
+<p class="mt-4 text-zinc-400 leading-relaxed max-w-2xl text-[15px] sm:text-base">Siswa Kelas XI PPLG B di SMK Negeri 2 Surakarta yang antusias menjembatani dunia rekayasa perangkat lunak, desain antarmuka pengguna (UI/UX), dan kepemimpinan digital. Memadukan logika pemrograman yang presisi dengan estetika visual untuk merancang produk digital yang fungsional, terstruktur, dan berdampak nyata.</p>
+<div class="mt-8 flex flex-wrap gap-3">
+<a href="#projects" class="grad-bg inline-flex items-center gap-2 rounded-xl px-7 py-3.5 font-bold text-white shadow-xl shadow-indigo-600/40 hover:-translate-y-1 transition-all">Jelajahi Proyek <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+<a href="#contact" class="inline-flex items-center gap-2 rounded-xl px-7 py-3.5 font-bold text-zinc-100 border border-white/15 bg-white/5 hover:bg-white/10 hover:-translate-y-1 transition-all">Unduh Resume / Hubungi <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+</div>
+<div class="mt-8 flex items-center gap-3">
+<span class="text-xs font-mono uppercase tracking-widest text-zinc-500">find me on</span>
+<span class="h-px flex-1 max-w-[80px] bg-gradient-to-r from-white/20 to-transparent"></span>
+<div class="flex gap-2.5">
+<a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="grid place-items-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-zinc-300 hover:text-white hover:border-indigo-400/50 hover:bg-indigo-500/15 hover:-translate-y-1 transition-all"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a>
+<a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="grid place-items-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-zinc-300 hover:text-white hover:border-sky-400/50 hover:bg-sky-500/15 hover:-translate-y-1 transition-all"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></a>
+<a href="https://notion.so" target="_blank" rel="noopener" aria-label="Notion Workspace" class="grid place-items-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-zinc-300 hover:text-white hover:border-violet-400/50 hover:bg-violet-500/15 hover:-translate-y-1 transition-all font-display font-bold">N</a>
+<a href="mailto:nalasyifa.amaranggana@gmail.com" aria-label="Email" class="grid place-items-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-zinc-300 hover:text-white hover:border-cyan-400/50 hover:bg-cyan-500/15 hover:-translate-y-1 transition-all"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6L22 7"/></svg></a>
+</div>
+</div>
+<dl class="mt-8 flex flex-wrap gap-x-10 gap-y-4">
+<div><dt class="text-[11px] font-mono uppercase tracking-widest text-zinc-500">Sekolah</dt><dd class="font-display font-bold text-white">SMKN 2 Surakarta</dd></div>
+<div><dt class="text-[11px] font-mono uppercase tracking-widest text-zinc-500">Jurusan</dt><dd class="font-display font-bold text-white">PPLG · XI-B</dd></div>
+<div><dt class="text-[11px] font-mono uppercase tracking-widest text-zinc-500">Basis</dt><dd class="font-display font-bold text-white">Surakarta, ID</dd></div>
+</dl>
+</div>
+<div class="reveal relative mx-auto w-full max-w-[380px]">
+<div aria-hidden="true" class="absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-indigo-600/30 via-violet-600/20 to-cyan-400/25 blur-2xl"></div>
+<div class="grad-border relative rounded-[1.8rem] p-[1.5px] shadow-2xl">
+<div class="relative rounded-[1.75rem] overflow-hidden bg-[#121218]">
+<div class="flex items-center gap-1.5 px-5 py-3.5 border-b border-white/10 bg-white/[.02]"><span class="code-dot bg-[#ff5f57]"></span><span class="code-dot bg-[#febc2e]"></span><span class="code-dot bg-[#28c840]"></span><span class="ml-3 font-mono text-xs text-zinc-500">nalasyifa — portfolio.tsx</span></div>
+<div class="relative aspect-[4/4.4] grid place-items-center overflow-hidden">
+<div class="absolute inset-0 grid-bg opacity-70"></div>
+<div class="relative text-center px-8">
+<div class="mx-auto w-32 h-32 rounded-3xl grad-bg grid place-items-center font-display font-bold text-5xl text-white shadow-2xl shadow-indigo-600/50 rotate-3">NA</div>
+<p class="mt-5 font-mono text-sm text-zinc-300">const dev = <span class="text-cyan-300">"Nalasyifa"</span>;</p>
+<p class="font-mono text-xs text-zinc-500 mt-1">role: front-end · android-ui · pm</p>
+<div class="mt-4 flex justify-center gap-1.5 font-mono text-[11px]"><span class="px-2.5 py-1 rounded-md bg-indigo-500/15 border border-indigo-400/30 text-indigo-200">XML</span><span class="px-2.5 py-1 rounded-md bg-cyan-500/15 border border-cyan-400/30 text-cyan-200">Tailwind</span><span class="px-2.5 py-1 rounded-md bg-violet-500/15 border border-violet-400/30 text-violet-200">Figma</span></div>
+</div>
+</div>
+<div class="px-5 py-4 border-t border-white/10 flex items-center justify-between bg-white/[.02]"><div class="font-mono text-xs text-zinc-400">▸ npm run <span class="text-emerald-300">collaborate</span></div><div class="font-mono text-xs text-zinc-500">v2.6.0</div></div>
+</div>
+</div>
+<div class="animate-float absolute -top-4 -right-3 sm:-right-6 glass border border-emerald-400/30 rounded-2xl px-4 py-2.5 flex items-center gap-2.5 shadow-xl"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span></span><span class="text-xs font-semibold text-emerald-100">🟢 Terbuka untuk Kolaborasi &amp; Proyek Teknologi</span></div>
+<div class="animate-float-slow absolute -bottom-5 -left-3 sm:-left-6 glass border border-white/15 rounded-2xl px-4 py-3 shadow-xl flex items-center gap-3"><span class="grid place-items-center w-9 h-9 rounded-xl grad-bg text-white font-bold">✓</span><span class="text-xs leading-tight"><b class="text-white block">MPK · Sekretaris Umum</b><span class="text-zinc-400">Leadership &amp; Administration</span></span></div>
+</div>
+</div>
+</section>
+<section id="about" class="relative py-20 sm:py-28 scroll-mt-20">
+<div class="max-w-7xl mx-auto px-5 sm:px-8">
+<div class="reveal flex items-center gap-3 mb-3"><span class="font-mono text-sm text-cyan-300">01.</span><span class="text-xs font-bold uppercase tracking-[.25em] text-zinc-400">Tentang Saya</span><span class="h-px w-24 bg-gradient-to-r from-indigo-500/60 to-transparent"></span></div>
+<h2 class="reveal font-display font-bold text-white text-3xl sm:text-5xl tracking-tight max-w-2xl">Logika yang presisi, <span class="grad-text">estetika yang bermakna.</span></h2>
+<div class="mt-12 grid lg:grid-cols-2 gap-8 items-stretch">
+<article class="reveal grad-border rounded-3xl p-8 sm:p-10 leading-relaxed text-zinc-300 text-[15px] sm:text-base">
+<p>Perjalanan saya dimulai di jurusan <strong class="text-white">Pengembangan Perangkat Lunak dan Gim (PPLG B)</strong> — SMK Negeri 2 Surakarta, tempat saya jatuh cinta pada cara kerja software: dari baris kode pertama hingga aplikasi yang benar-benar dipakai orang.</p>
+<p class="mt-4">Sejak kelas X, saya mengikuti <strong class="text-white">Samsung Innovation Campus (SIC) 2025</strong>. Di sana saya ditempa untuk berpikir komputasional — memecah masalah besar menjadi langkah kecil yang sistematis — sekaligus belajar esensi kerja tim: membagi peran, menjaga alur kerja, dan menuntaskan proyek teknologi bersama.</p>
+<p class="mt-4">Sebagai <strong class="text-white">Sekretaris Umum MPK SMK Negeri 2 Surakarta periode 2026/2027</strong>, saya mengasah manajemen proyek, administrasi terstruktur, komunikasi publik, hingga koordinasi tim lintas divisi — tidak hanya membangun produk, tetapi juga menggerakkan orang di baliknya.</p>
+<div class="mt-7 flex flex-wrap gap-2"><span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-zinc-300">#problem-solving</span><span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-zinc-300">#team-collaboration</span><span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-zinc-300">#project-ownership</span></div>
+</article>
+<aside class="reveal grid sm:grid-cols-2 gap-4" aria-label="Rekam jejak">
+<div class="card-hover rounded-3xl border border-white/10 bg-white/[.03] p-6"><span class="grid place-items-center w-11 h-11 rounded-2xl bg-indigo-500/15 border border-indigo-400/30 text-xl">🏛️</span><h3 class="mt-4 font-display font-bold text-white">Sekretaris Umum MPK</h3><p class="mt-1.5 text-sm text-zinc-400 leading-relaxed">SMKN 2 Surakarta · 2026/2027. Administrasi &amp; koordinasi organisasi.</p></div>
+<div class="card-hover rounded-3xl border border-white/10 bg-white/[.03] p-6"><span class="grid place-items-center w-11 h-11 rounded-2xl bg-violet-500/15 border border-violet-400/30 text-xl">✦</span><h3 class="mt-4 font-display font-bold text-white">SIC Alumni 2025</h3><p class="mt-1.5 text-sm text-zinc-400 leading-relaxed">Samsung Innovation Campus — computational thinking &amp; teamwork sejak kelas X.</p></div>
+<div class="card-hover rounded-3xl border border-white/10 bg-white/[.03] p-6"><span class="grid place-items-center w-11 h-11 rounded-2xl bg-cyan-500/15 border border-cyan-400/30 text-xl">📱</span><h3 class="mt-4 font-display font-bold text-white">Fokus Saat Ini</h3><p class="mt-1.5 text-sm text-zinc-400 leading-relaxed">Android Studio, Web Front-End &amp; UI/UX Design.</p></div>
+<div class="card-hover rounded-3xl border border-white/10 bg-white/[.03] p-6"><span class="grid place-items-center w-11 h-11 rounded-2xl bg-emerald-500/15 border border-emerald-400/30 text-xl">🗂️</span><h3 class="mt-4 font-display font-bold text-white">Notion-Driven</h3><p class="mt-1.5 text-sm text-zinc-400 leading-relaxed">Mengelola alur kerja &amp; database proyek via Notion.</p></div>
+</aside>
+</div>
+</div>
+</section>
+<section id="skills" class="relative py-20 sm:py-28 scroll-mt-20 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-5 sm:px-8">
+<div class="reveal flex items-center gap-3 mb-3"><span class="font-mono text-sm text-cyan-300">02.</span><span class="text-xs font-bold uppercase tracking-[.25em] text-zinc-400">Keahlian &amp; Tools</span><span class="h-px w-24 bg-gradient-to-r from-indigo-500/60 to-transparent"></span></div>
+<div class="reveal flex flex-wrap items-end justify-between gap-4"><h2 class="font-display font-bold text-white text-3xl sm:text-5xl tracking-tight">Stack yang saya <span class="grad-text">kuasai.</span></h2><p class="text-zinc-400 max-w-md text-sm sm:text-base">Empat pilar — dari kode, desain visual, manajemen proyek, hingga kepemimpinan.</p></div>
+<div class="mt-12 grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
+<article class="reveal card-hover grad-border rounded-3xl p-7 flex flex-col"><span class="font-mono text-xs text-indigo-300">~/01 — build</span><h3 class="mt-2 font-display font-bold text-white text-lg">Mobile &amp; Web Development</h3><ul class="mt-4 space-y-2.5 text-sm text-zinc-300 flex-1"><li>▸ Android Studio · XML Layout · Mobile UI</li><li>▸ HTML5 · CSS3 · Tailwind CSS</li><li>▸ JavaScript dasar</li><li>▸ Git &amp; GitHub Pages</li></ul><div class="mt-5 h-1.5 rounded-full bg-white/10 overflow-hidden"><div class="h-full w-[82%] rounded-full grad-bg"></div></div></article>
+<article class="reveal card-hover rounded-3xl border border-white/10 bg-white/[.03] p-7 flex flex-col"><span class="font-mono text-xs text-violet-300">~/02 — design</span><h3 class="mt-2 font-display font-bold text-white text-lg">UI/UX &amp; Graphic Design</h3><ul class="mt-4 space-y-2.5 text-sm text-zinc-300 flex-1"><li>▸ Figma — wireframe &amp; prototyping</li><li>▸ Canva — konten &amp; publikasi</li><li>▸ Illustrator / Photoshop — vektor</li><li>▸ Poster infografis &amp; medsos</li></ul><div class="mt-5 h-1.5 rounded-full bg-white/10 overflow-hidden"><div class="h-full w-[88%] rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-400"></div></div></article>
+<article class="reveal card-hover rounded-3xl border border-white/10 bg-white/[.03] p-7 flex flex-col"><span class="font-mono text-xs text-cyan-300">~/03 — manage</span><h3 class="mt-2 font-display font-bold text-white text-lg">Project &amp; Task Management</h3><ul class="mt-4 space-y-2.5 text-sm text-zinc-300 flex-1"><li>▸ Notion — database &amp; workspace</li><li>▸ Kanban / Sprint workflow</li><li>▸ Dokumentasi teknis</li><li>▸ Tracking proyek</li></ul><div class="mt-5 h-1.5 rounded-full bg-white/10 overflow-hidden"><div class="h-full w-[90%] rounded-full bg-gradient-to-r from-cyan-400 to-sky-500"></div></div></article>
+<article class="reveal card-hover rounded-3xl border border-white/10 bg-white/[.03] p-7 flex flex-col"><span class="font-mono text-xs text-emerald-300">~/04 — lead</span><h3 class="mt-2 font-display font-bold text-white text-lg">Soft Skills &amp; Leadership</h3><ul class="mt-4 space-y-2.5 text-sm text-zinc-300 flex-1"><li>▸ Kepemimpinan organisasi</li><li>▸ Administrasi &amp; kesekretariatan</li><li>▸ Public speaking / MC</li><li>▸ Komunikasi kolaboratif</li></ul><div class="mt-5 h-1.5 rounded-full bg-white/10 overflow-hidden"><div class="h-full w-[95%] rounded-full bg-gradient-to-r from-emerald-400 to-teal-300"></div></div></article>
+</div>
+</div>
+</section>
+<section id="projects" class="relative py-20 sm:py-28 scroll-mt-20 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-5 sm:px-8">
+<div class="reveal flex items-center gap-3 mb-3"><span class="font-mono text-sm text-cyan-300">03.</span><span class="text-xs font-bold uppercase tracking-[.25em] text-zinc-400">Portofolio Proyek</span><span class="h-px w-24 bg-gradient-to-r from-indigo-500/60 to-transparent"></span></div>
+<div class="reveal flex flex-wrap items-end justify-between gap-4"><h2 class="font-display font-bold text-white text-3xl sm:text-5xl tracking-tight">Featured <span class="grad-text">projects.</span></h2><a href="https://github.com" target="_blank" rel="noopener" class="text-sm font-semibold text-zinc-300 hover:text-white">Lihat semua di GitHub →</a></div>
+<div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<article class="reveal card-hover rounded-3xl overflow-hidden border border-white/10 bg-[#101016] flex flex-col">
+<div class="relative h-52 overflow-hidden bg-gradient-to-br from-indigo-600 via-violet-600 to-indigo-900"><div class="absolute inset-0 grid-bg opacity-60"></div><div class="absolute inset-0 grid place-items-center"><div class="text-center"><div class="text-6xl font-display font-bold text-white">Aa</div><div class="mt-1 font-mono text-xs text-white/80 tracking-widest">ALPHABET · FUN</div></div></div><span class="absolute top-4 left-4 text-[11px] font-bold px-3 py-1.5 rounded-full bg-black/40 border border-white/20 text-white">📱 Mobile App</span></div>
+<div class="p-7 flex flex-col flex-1"><h3 class="font-display font-bold text-white text-xl">Alphabet Fun — Mobile Interactive App</h3><p class="mt-3 text-sm text-zinc-400 leading-relaxed flex-1">Aplikasi media pembelajaran interaktif Android untuk anak-anak — layout XML responsif, manajemen aset audio-visual, navigasi ramah pengguna.</p><div class="mt-4 flex flex-wrap gap-2"><span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-indigo-500/15 border border-indigo-400/25 text-indigo-200">Android Studio</span><span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-zinc-300">XML UI</span><span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-zinc-300">Mobile Dev</span><span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-zinc-300">Figma</span></div><div class="mt-6 flex gap-3"><a href="#contact" class="flex-1 text-center text-sm font-bold rounded-xl px-4 py-2.5 grad-bg text-white">Live Preview</a><a href="https://github.com" target="_blank" rel="noopener" aria-label="Source code" class="grid place-items-center w-11 rounded-xl border border-white/15 text-zinc-300 hover:text-white">↗</a></div></div>
+</article>
+<article class="reveal card-hover rounded-3xl overflow-hidden border border-white/10 bg-[#101016] flex flex-col">
+<div class="relative h-52 overflow-hidden bg-gradient-to-br from-cyan-500 via-sky-600 to-indigo-800"><div class="absolute inset-0 grid-bg opacity-60"></div><div class="absolute inset-0 grid place-items-center"><div class="text-center"><div class="font-mono text-white text-sm border border-white/40 rounded-lg px-4 py-2 bg-black/30">&lt;SIC /&gt; tech-project</div><div class="mt-2 font-mono text-[11px] text-white/70">iot · code · teamwork</div></div></div><span class="absolute top-4 left-4 text-[11px] font-bold px-3 py-1.5 rounded-full bg-black/40 border border-white/20 text-white">✦ SIC 2025</span></div>
+<div class="p-7 flex flex-col flex-1"><h3 class="font-display font-bold text-white text-xl">Samsung Innovation Campus Tech Project</h3><p class="mt-3 text-sm text-zinc-400 leading-relaxed flex-1">Proyek pemecahan masalah berbasis teknologi selama SIC (kelas X) — kolaborasi tim dengan alur kerja terstruktur dari ide hingga demo.</p><div class="mt-4 flex flex-wrap gap-2"><span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-cyan-500/15 border border-cyan-400/25 text-cyan-200">SIC 2025</span><span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-zinc-300">IoT / Coding</span><span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-zinc-300">Project Mgmt</span><span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-zinc-300">Notion</span></div><div class="mt-6 flex gap-3"><a href="#contact" class="flex-1 text-center text-sm font-bold rounded-xl px-4 py-2.5 grad-bg text-white">Lihat Studi Kasus</a><a href="https://github.com" target="_blank" rel="noopener" aria-label="Source code" class="grid place-items-center w-11 rounded-xl border border-white/15 text-zinc-300 hover:text-white">↗</a></div></div>
+</article>
+<article class="reveal card-hover rounded-3xl overflow-hidden border border-white/10 bg-[#101016] flex flex-col md:col-span-2 lg:col-span-1">
+<div class="relative h-52 overflow-hidden bg-gradient-to-br from-fuchsia-600 via-violet-600 to-indigo-900"><div class="absolute inset-0 grid-bg opacity-60"></div><div class="absolute inset-0 grid place-items-center p-6"><div class="w-full max-w-[240px] rounded-xl bg-white p-3 shadow-2xl"><div class="h-2.5 w-2/3 rounded bg-gradient-to-r from-indigo-500 to-cyan-400"></div><div class="mt-2 h-2 w-full rounded bg-zinc-200"></div><div class="mt-1.5 h-2 w-5/6 rounded bg-zinc-200"></div><div class="mt-3 grid grid-cols-3 gap-1.5"><div class="h-10 rounded bg-indigo-100"></div><div class="h-10 rounded bg-violet-100"></div><div class="h-10 rounded bg-cyan-100"></div></div><div class="mt-1.5 font-mono text-[9px] text-zinc-500 tracking-widest">SPMB · INFOGRAFIS RESMI</div></div></div><span class="absolute top-4 left-4 text-[11px] font-bold px-3 py-1.5 rounded-full bg-black/40 border border-white/20 text-white">🎨 Design</span></div>
+<div class="p-7 flex flex-col flex-1"><h3 class="font-display font-bold text-white text-xl">Desain Komunikasi &amp; Publikasi Resmi Sekolah</h3><p class="mt-3 text-sm text-zinc-400 leading-relaxed flex-1">Materi grafis resmi, poster infografis alur SPMB &amp; media komunikasi publik SMKN 2 Surakarta — profesional dan mudah dipahami.</p><div class="mt-4 flex flex-wrap gap-2"><span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-fuchsia-500/15 border border-fuchsia-400/25 text-fuchsia-200">Graphic Design</span><span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-zinc-300">Infographic</span><span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-zinc-300">Layout Vector</span><span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-zinc-300">Branding</span></div><div class="mt-6 flex gap-3"><a href="#contact" class="flex-1 text-center text-sm font-bold rounded-xl px-4 py-2.5 grad-bg text-white">Lihat Galeri</a><a href="https://github.com" target="_blank" rel="noopener" aria-label="Galeri" class="grid place-items-center w-11 rounded-xl border border-white/15 text-zinc-300 hover:text-white">↗</a></div></div>
+</article>
+</div>
+</div>
+</section>
+<section id="contact" class="relative py-20 sm:py-28 scroll-mt-20 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-5 sm:px-8">
+<div class="reveal flex items-center gap-3 mb-3"><span class="font-mono text-sm text-cyan-300">04.</span><span class="text-xs font-bold uppercase tracking-[.25em] text-zinc-400">Kontak</span><span class="h-px w-24 bg-gradient-to-r from-indigo-500/60 to-transparent"></span></div>
+<div class="grid lg:grid-cols-2 gap-8 items-stretch">
+<div class="reveal relative overflow-hidden rounded-3xl grad-border p-8 sm:p-12">
+<h2 class="font-display font-bold text-white text-3xl sm:text-4xl tracking-tight">Mari berdiskusi &amp; <span class="grad-text">berkolaborasi.</span></h2>
+<p class="mt-4 text-zinc-400 leading-relaxed text-[15px]">Punya ide proyek teknologi, butuh bantuan desain UI, atau ingin berkolaborasi? Kotak masuk saya selalu terbuka.</p>
+<ul class="mt-8 space-y-4 text-sm">
+<li class="flex items-center gap-4"><span class="grid place-items-center w-11 h-11 rounded-2xl bg-indigo-500/15 border border-indigo-400/30">✉️</span><span><span class="block text-xs font-mono uppercase tracking-widest text-zinc-500">Email</span><a href="mailto:nalasyifa.amaranggana@gmail.com" class="font-semibold text-white">nalasyifa.amaranggana@gmail.com</a></span></li>
+<li class="flex items-center gap-4"><span class="grid place-items-center w-11 h-11 rounded-2xl bg-cyan-500/15 border border-cyan-400/30">📍</span><span><span class="block text-xs font-mono uppercase tracking-widest text-zinc-500">Lokasi</span><span class="font-semibold text-white">Surakarta, Indonesia</span></span></li>
+<li class="flex items-center gap-4"><span class="grid place-items-center w-11 h-11 rounded-2xl bg-violet-500/15 border border-violet-400/30">⚡</span><span><span class="block text-xs font-mono uppercase tracking-widest text-zinc-500">Respons</span><span class="font-semibold text-white">Biasanya &lt; 24 jam</span></span></li>
+</ul>
+<div class="mt-8 flex gap-2.5">
+<a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="grid place-items-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-zinc-300 hover:text-white transition">GH</a>
+<a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="grid place-items-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-zinc-300 hover:text-white transition">in</a>
+<a href="https://notion.so" target="_blank" rel="noopener" aria-label="Notion" class="grid place-items-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-zinc-300 hover:text-white transition">N</a>
+<a href="mailto:nalasyifa.amaranggana@gmail.com" aria-label="Email" class="grid place-items-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-zinc-300 hover:text-white transition">@</a>
+</div>
+</div>
+<form id="contact-form" class="reveal rounded-3xl border border-white/10 bg-white/[.03] p-8 sm:p-10 space-y-5" action="mailto:nalasyifa.amaranggana@gmail.com" method="post" enctype="text/plain">
+<div class="grid sm:grid-cols-2 gap-5">
+<div><label for="nama" class="block text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2">Nama</label><input id="nama" name="nama" type="text" required placeholder="Nama kamu" class="w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-zinc-600 outline-none focus:border-indigo-400/60 focus:ring-2 focus:ring-indigo-500/20 transition" /></div>
+<div><label for="email" class="block text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2">Email</label><input id="email" name="email" type="email" required placeholder="kamu@email.com" class="w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-zinc-600 outline-none focus:border-indigo-400/60 focus:ring-2 focus:ring-indigo-500/20 transition" /></div>
+</div>
+<div><label for="subjek" class="block text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2">Subjek</label><input id="subjek" name="subjek" type="text" placeholder="Kolaborasi proyek / desain / lainnya" class="w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-zinc-600 outline-none focus:border-indigo-400/60 focus:ring-2 focus:ring-indigo-500/20 transition" /></div>
+<div><label for="pesan" class="block text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2">Pesan</label><textarea id="pesan" name="pesan" rows="5" required placeholder="Ceritakan ide atau kebutuhanmu..." class="w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-zinc-600 outline-none focus:border-indigo-400/60 focus:ring-2 focus:ring-indigo-500/20 transition resize-none"></textarea></div>
+<button type="submit" class="grad-bg w-full rounded-xl px-6 py-3.5 font-bold text-white shadow-xl shadow-indigo-600/30 hover:-translate-y-0.5 transition-all">Kirim Pesan →</button>
+<p id="form-note" class="hidden text-sm text-emerald-300 font-medium">✓ Pesan siap dikirim via aplikasi email kamu. Terima kasih!</p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-white/10 bg-[#0a0a10]">
+<div class="max-w-7xl mx-auto px-5 sm:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-5">
+<a href="#hero" class="flex items-center gap-3"><span class="grid place-items-center w-9 h-9 rounded-xl grad-bg font-display font-bold text-white">N</span><span class="font-display font-bold text-white">Nalasyifa A.</span></a>
+<nav aria-label="Navigasi footer"><ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-zinc-400"><li><a href="#hero" class="hover:text-white transition">Beranda</a></li><li><a href="#about" class="hover:text-white transition">Tentang</a></li><li><a href="#skills" class="hover:text-white transition">Keahlian</a></li><li><a href="#projects" class="hover:text-white transition">Proyek</a></li><li><a href="#contact" class="hover:text-white transition">Kontak</a></li></ul></nav>
+<p class="text-xs text-zinc-500 font-mono">© 2026 Nalasyifa Amaranggana. All rights reserved.</p>
+</div>
+</footer>
+<button id="to-top" aria-label="Kembali ke atas" class="fixed bottom-6 right-6 z-50 hidden w-11 h-11 rounded-xl grad-bg text-white shadow-xl">↑</button>
+<script>
+const menuBtn=document.getElementById('menu-btn'),mobileMenu=document.getElementById('mobile-menu'),iconOpen=document.getElementById('icon-open'),iconClose=document.getElementById('icon-close');
+function toggleMenu(force){const show=force!==undefined?force:mobileMenu.classList.contains('hidden');mobileMenu.classList.toggle('hidden',!show);iconOpen.classList.toggle('hidden',show);iconClose.classList.toggle('hidden',!show);menuBtn.setAttribute('aria-expanded',show);}
+menuBtn.addEventListener('click',()=>toggleMenu());
+document.querySelectorAll('.m-link').forEach(a=>a.addEventListener('click',()=>toggleMenu(false)));
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const navLinks=document.querySelectorAll('.nav-link');
+const secObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){navLinks.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-40% 0px -55% 0px'});
+['hero','about','skills','projects','contact'].forEach(id=>{const s=document.getElementById(id);if(s)secObs.observe(s);});
+const toTop=document.getElementById('to-top');
+window.addEventListener('scroll',()=>{const show=window.scrollY>600;toTop.classList.toggle('hidden',!show);},{passive:true});
+toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+document.getElementById('contact-form').addEventListener('submit',()=>{document.getElementById('form-note').classList.remove('hidden');});
+</script>
+</body>
+</html>
