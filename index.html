@@ -4,166 +4,132 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Nalasyifa Amaranggana — Software Engineering Student & Creative Developer</title>
-<meta name="description" content="Portofolio Nalasyifa Amaranggana — XI PPLG B SMKN 2 Surakarta. Project Manager, Android UI & Front-End Developer, Creative Designer." />
+<meta name="description" content="Portofolio Nalasyifa Amaranggana — XI PPLG B SMKN 2 Surakarta. SIC Stage 3 (AI & IoT) Alumni, Marketing TEFA, Public Speaker & MC." />
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-tailwind.config = {
-  theme: { extend: {
-    fontFamily: { sans: ['"Plus Jakarta Sans"','Inter','sans-serif'], display: ['"Playfair Display"','serif'], mono: ['"JetBrains Mono"','monospace'] },
-    colors: {
-      blush: { 50:'#FFF5F7',100:'#FDE8EC',200:'#FBD3DB',300:'#F6B3C0',400:'#EE8CA3',500:'#E0658A',600:'#C74B72',700:'#A53A5D' },
-      champagne: { 100:'#FDF3E7',200:'#F9E5C8',300:'#F3D3A6' },
-      plum: { 500:'#7A3B52',600:'#63304A',700:'#4E2438',800:'#3E1C30' }
-    }
-  } }
-}
+tailwind.config = { theme: { extend: {
+  fontFamily: { sans: ['"Plus Jakarta Sans"','Inter','sans-serif'], display: ['"Playfair Display"','serif'], mono: ['"JetBrains Mono"','monospace'] },
+  colors: { blush: {50:'#FFF7F8',100:'#FDE9ED',200:'#FBD3DB',300:'#F6B3C0',400:'#EE8CA3',500:'#E0658A',600:'#C74B72',700:'#A53A5D'}, plum: {500:'#7A3B52',600:'#63304A',700:'#4E2438'} }
+}}};
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="bg-decor" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="petal p1">🌸</span><span class="petal p2">🌷</span><span class="petal p3">💗</span></div>
-
-<header class="fixed top-0 inset-x-0 z-50">
+<div id="spotlight" aria-hidden="true"></div>
+<div class="bg-decor" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="petal p1">🌸</span><span class="petal p2">🎤</span><span class="petal p3">💗</span></div>
+<header id="navbar">
 <nav aria-label="Navigasi utama" class="max-w-6xl mx-auto px-4 sm:px-6">
-<div class="nav-shell mt-4 flex items-center justify-between px-4 sm:px-6 py-3">
+<div id="nav-shell" class="nav-shell mt-4 flex items-center justify-between px-4 sm:px-6 py-3">
 <a href="#hero" class="font-display text-xl sm:text-2xl font-bold text-plum-700">Nalasyifa A.<span class="dot-rose">.</span></a>
 <ul class="hidden md:flex items-center gap-7 text-sm font-semibold text-plum-600">
 <li><a class="nav-link" href="#hero">Beranda</a></li>
 <li><a class="nav-link" href="#about">Tentang</a></li>
 <li><a class="nav-link" href="#skills">Keahlian</a></li>
-<li><a class="nav-link" href="#projects">Proyek</a></li>
 <li><a class="nav-link" href="#contact">Kontak</a></li>
 </ul>
-<a href="#contact" class="hidden md:inline-flex btn-rose text-sm">Hubungi Saya <span>→</span></a>
-<button id="menu-btn" class="md:hidden btn-icon" aria-label="Buka menu" aria-expanded="false"><svg id="icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg id="icon-close" class="hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+<a href="#contact" class="hidden md:inline-flex btn-rose text-sm">Hubungi Saya <span aria-hidden="true">→</span></a>
+<button id="menu-btn" class="md:hidden btn-icon" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu"><svg id="icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg id="icon-close" class="hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
 </div>
-<div id="mobile-menu" class="md:hidden hidden nav-shell mt-2 p-3">
-<a href="#hero" class="m-link">Beranda</a><a href="#about" class="m-link">Tentang</a><a href="#skills" class="m-link">Keahlian</a><a href="#projects" class="m-link">Proyek</a><a href="#contact" class="m-link">Kontak</a>
-<a href="#contact" class="m-link btn-rose mt-2 text-center justify-center">Hubungi Saya</a>
+<div id="mobile-menu" class="md:hidden nav-shell mt-2 p-3">
+<a href="#hero" class="m-link">Beranda</a><a href="#about" class="m-link">Tentang</a><a href="#skills" class="m-link">Keahlian</a><a href="#contact" class="m-link">Kontak</a>
+<a href="#contact" class="m-link btn-rose mt-2 justify-center">Hubungi Saya</a>
 </div>
 </nav>
 </header>
-
 <main>
-<!-- HERO -->
 <section id="hero" class="pt-32 sm:pt-40 pb-14 sm:pb-20 scroll-mt-24">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-[1.1fr_.9fr] gap-12 items-center">
 <div class="reveal visible">
 <div class="flex flex-wrap gap-2 mb-6">
 <span class="pill">🎓 PPLG B — SMK Negeri 2 Surakarta</span>
-<span class="pill pill-deep">🏛️ Sekretaris Umum MPK 2026/2027</span>
-<span class="pill">✦ Samsung Innovation Campus Alumni</span>
+<span class="pill pill-deep">✦ SIC Stage 3 (AI &amp; IoT) Alumni</span>
+<span class="pill">🎤 Marketing TEFA &amp; Public Speaker</span>
 </div>
 <p class="font-mono text-xs tracking-widest text-blush-600 mb-3">✿ HELLO, WELCOME TO MY SPACE ✿</p>
-<h1 class="font-display font-bold text-plum-800 text-4xl sm:text-6xl leading-[1.05]">Hi, saya<br><span class="grad-rose-text">Nalasyifa Amaranggana</span></h1>
-<p class="mt-5 font-semibold text-plum-700 text-base sm:text-lg leading-relaxed">11th-Grade Software Engineering Student <span class="sep">|</span> Aspiring Project Manager, Android UI &amp; Front-End Developer <span class="sep">|</span> Creative Designer</p>
-<p class="mt-4 text-plum-600/90 leading-relaxed max-w-xl text-[15px] sm:text-base">Siswa Kelas XI PPLG B di SMK Negeri 2 Surakarta yang antusias memadukan rekayasa perangkat lunak, antarmuka pengguna (UI/UX), dan estetika desain visual. Berkomitmen menghadirkan solusi teknologi yang fungsional, terstruktur rapi, dan memiliki sentuhan visual yang elegan.</p>
+<h1 class="font-display font-bold text-plum-700 text-4xl sm:text-6xl leading-[1.05]">Hi, saya<br><span class="grad-rose-text">Nalasyifa Amaranggana</span></h1>
+<p class="typed-line mt-5 text-base sm:text-lg font-semibold text-plum-700"><span id="typed" aria-live="polite"></span><span id="typed-caret" aria-hidden="true">|</span></p>
+<p class="mt-3 text-plum-600/90 leading-relaxed max-w-xl text-[15px] sm:text-base">Siswa Kelas XI PPLG B di SMK Negeri 2 Surakarta yang antusias memadukan rekayasa perangkat lunak, dasar kecerdasan buatan (AI/ML), antarmuka pengguna (UI/UX), serta keahlian komunikasi publik dan pemasaran digital. Berkomitmen menghadirkan produk teknologi yang fungsional, terstruktur rapi, serta mampu dikomunikasikan secara berdampak kepada audiens.</p>
 <div class="mt-8 flex flex-wrap gap-3">
-<a href="https://github.com/nalleaa/" target="_blank" rel="noopener" class="btn-rose"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg> Jelajahi Proyek Saya <span>↗</span></a>
-<a href="#about" class="btn-outline">Kenali Saya Lebih Lanjut ↓</a>
+<a href="https://github.com/nalleaa/" target="_blank" rel="noopener" class="btn-rose btn-scale"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg> Jelajahi Profil GitHub <span aria-hidden="true">↗</span></a>
+<a href="#about" class="btn-outline">Tentang Saya ↓</a>
 </div>
 <div class="mt-8 flex items-center gap-3">
 <span class="text-xs font-bold uppercase tracking-widest text-plum-600/60">find me on</span>
 <span class="divider-line"></span>
 <div class="flex gap-2.5">
-<a href="https://github.com/nalleaa/" target="_blank" rel="noopener" aria-label="GitHub" class="soc"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a>
-<a href="https://instagram.com/nalnaew" target="_blank" rel="noopener" aria-label="Instagram @nalnaew" class="soc"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.4" fill="currentColor" stroke="none"/></svg></a>
-<a href="mailto:ininallea@gmail.com" aria-label="Email" class="soc"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6L22 7"/></svg></a>
+<a href="https://github.com/nalleaa/" target="_blank" rel="noopener" aria-label="GitHub nalleaa" class="soc"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a>
+<a href="https://instagram.com/nalnaew" target="_blank" rel="noopener" aria-label="Instagram @nalnaew" class="soc"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.4" fill="currentColor" stroke="none"/></svg></a>
+<a href="mailto:ininallea@gmail.com" aria-label="Email ininallea@gmail.com" class="soc"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6L22 7"/></svg></a>
 </div>
 </div>
 </div>
-<div class="reveal relative mx-auto w-full max-w-[360px]">
+<div class="reveal relative mx-auto w-full max-w-[360px]" style="perspective:900px">
 <div class="avatar-glow" aria-hidden="true"></div>
-<div class="avatar-frame">
+<div class="avatar-frame tilt" id="avatar-tilt">
 <div class="avatar-top"><span class="adot r"></span><span class="adot y"></span><span class="adot g"></span><span class="avatar-title">nalasyifa — aesthetic.tsx 🌸</span></div>
 <div class="avatar-body">
 <div class="avatar-circle">NA</div>
 <p class="avatar-name">Nalasyifa Amaranggana</p>
-<p class="avatar-role">front-end · android-ui · designer</p>
-<div class="avatar-tags"><span>🌷 XML</span><span>💗 Tailwind</span><span>✨ Figma</span></div>
+<p class="avatar-role">dev · marketing · speaker</p>
+<div class="avatar-tags"><span>💻 Dev</span><span>🤖 AI/IoT</span><span>🎤 MC</span></div>
 </div>
-<div class="avatar-bottom"><span>▸ npm run <b>create-beautiful-things</b></span><span>v3.0 🌸</span></div>
+<div class="avatar-bottom"><span>▸ npm run <b>create-beautiful-things</b></span><span>v5.0 🌸</span></div>
 </div>
 <div class="float-badge fb-top"><span class="fb-dot"></span> 🌸 Terbuka untuk Kolaborasi &amp; Proyek Kreatif</div>
-<div class="float-badge fb-bottom"><span class="fb-check">✓</span><span><b>MPK · Sekretaris Umum</b><i>Leadership &amp; Administration</i></span></div>
+<div class="float-badge fb-bottom"><span class="fb-check">✓</span><span><b>TEFA · Speaker · SIC S3</b><i>Market · Host · Build</i></span></div>
 </div>
 </div>
 </section>
-
-<!-- ABOUT -->
 <section id="about" class="py-16 sm:py-24 scroll-mt-20">
 <div class="max-w-6xl mx-auto px-4 sm:px-6">
 <div class="reveal sec-label"><span>01.</span> Tentang Saya <i></i></div>
-<h2 class="reveal font-display font-bold text-plum-800 text-3xl sm:text-5xl tracking-tight">Lembut dalam estetika,<br><span class="grad-rose-text">tegas dalam logika.</span></h2>
+<h2 class="reveal font-display font-bold text-plum-700 text-3xl sm:text-5xl tracking-tight">Code, kamera, <span class="grad-rose-text">dan mikrofon.</span></h2>
 <div class="mt-10 grid lg:grid-cols-2 gap-6 items-stretch">
-<article class="reveal card-rose p-8 sm:p-10 leading-relaxed text-plum-700/90 text-[15px] sm:text-base">
-<p>Perjalanan saya dimulai di jurusan <strong>Pengembangan Perangkat Lunak dan Gim (PPLG B)</strong> — SMK Negeri 2 Surakarta, tempat saya belajar membangun software dari nol: logika, struktur data, hingga aplikasi yang benar-benar dipakai.</p>
-<p class="mt-4">Sejak kelas X saya mengikuti <strong>Samsung Innovation Campus (SIC) 2025</strong> — pengalaman berharga yang melatih <em>computational thinking</em>, problem solving sistematis, dan kerja tim lintas peran.</p>
-<p class="mt-4">Sebagai <strong>Sekretaris Umum MPK SMKN 2 Surakarta periode 2026/2027</strong>, saya mengasah tata kelola administrasi yang terorganisir, manajemen proyek, dan komunikasi publik — fondasi yang membuat setiap karya saya rapi, terdokumentasi, dan berdampak.</p>
-<div class="mt-6 flex flex-wrap gap-2"><span class="htag">#organized-mind</span><span class="htag">#creative-heart</span><span class="htag">#team-player</span></div>
+<article class="reveal card-rose p-8 sm:p-10 leading-relaxed text-plum-600/90 text-[15px] sm:text-base">
+<p>Perjalanan belajar saya berakar di jurusan <strong>Pengembangan Perangkat Lunak dan Gim (PPLG B)</strong> — SMK Negeri 2 Surakarta: fondasi logika, algoritma, dan pembangunan aplikasi mobile serta web yang rapi dan fungsional.</p>
+<p class="mt-4">Pengalaman paling berharga datang dari program <strong>Samsung Innovation Campus (SIC) 2025</strong> sejak kelas X — hingga menembus <strong>Stage 3 (Artificial Intelligence / Machine Learning)</strong> setelah menyelesaikan modul <strong>IoT (Internet of Things)</strong> dan computational thinking: memecah masalah kompleks, melatih model dasar, dan berkolaborasi dalam tim teknologi.</p>
+<p class="mt-4">Ketertarikan teknologi ini didukung kepiawaian interpersonal: aktif sebagai <strong>Tim Marketing di Teaching Factory (TEFA) SMK</strong> dalam membangun strategi komunikasi produk vokasi, jam terbang sebagai <strong>Master of Ceremony (MC) &amp; Public Speaker</strong> di berbagai forum, serta peran di <strong>MPK SMKN 2 Surakarta</strong> yang menjaga kedisiplinan administrasi dan koordinasi kerja.</p>
+<div class="mt-6 flex flex-wrap gap-2"><span class="htag">#ai-ml-explorer</span><span class="htag">#tefa-marketer</span><span class="htag">#public-speaker</span></div>
 </article>
-<aside class="reveal grid sm:grid-cols-2 gap-4" aria-label="Highlight">
-<div class="hl-card"><span class="hl-ico">🏛️</span><h3>Sekretaris Umum MPK</h3><p>SMKN 2 Surakarta · 2026/2027</p></div>
-<div class="hl-card"><span class="hl-ico">✦</span><h3>SIC Alumni 2025</h3><p>Samsung Innovation Campus sejak kelas X</p></div>
-<div class="hl-card"><span class="hl-ico">📱</span><h3>Fokus Keahlian</h3><p>Mobile UI · Web Front-End · Visual Branding</p></div>
-<div class="hl-card"><span class="hl-ico">🗂️</span><h3>Notion Enthusiast</h3><p>Alur kerja &amp; database proyek terstruktur</p></div>
+<aside class="reveal grid sm:grid-cols-2 gap-4" aria-label="Highlight kompetensi">
+<div class="hl-card"><span class="hl-ico">🤖</span><h3>SIC Stage 3 · AI &amp; IoT</h3><p>Alumni Batch 2025 — AI/ML &amp; IoT track</p></div>
+<div class="hl-card"><span class="hl-ico">📣</span><h3>Marketing TEFA</h3><p>Tim marketing Teaching Factory SMKN 2 Ska</p></div>
+<div class="hl-card"><span class="hl-ico">🎤</span><h3>Public Speaker &amp; MC</h3><p>Experienced event host berbagai forum</p></div>
+<div class="hl-card"><span class="hl-ico">🗂️</span><h3>Notion &amp; Organisasi</h3><p>Workspace specialist &amp; admin MPK</p></div>
 </aside>
 </div>
 </div>
 </section>
-
-<!-- SKILLS -->
 <section id="skills" class="py-16 sm:py-24 scroll-mt-20 sec-alt">
 <div class="max-w-6xl mx-auto px-4 sm:px-6">
 <div class="reveal sec-label"><span>02.</span> Keahlian &amp; Tools <i></i></div>
-<div class="reveal flex flex-wrap items-end justify-between gap-4"><h2 class="font-display font-bold text-plum-800 text-3xl sm:text-5xl tracking-tight">Skillset manis <span class="grad-rose-text">saya.</span></h2><p class="text-plum-600/80 max-w-md text-sm sm:text-base">Empat pilar kemampuan — kode, desain, manajemen, dan kepemimpinan.</p></div>
-<div class="mt-10 grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
-<article class="reveal skill-card"><span class="skill-no">~/01 — build 💻</span><h3>Mobile &amp; Web Development</h3><ul><li>Android Studio · XML Layout · Mobile UI</li><li>HTML5 · CSS3 · Tailwind CSS</li><li>Git &amp; GitHub Pages</li></ul><div class="bar"><i style="width:84%"></i></div></article>
-<article class="reveal skill-card"><span class="skill-no">~/02 — design 🎨</span><h3>UI/UX &amp; Graphic Design</h3><ul><li>Figma (UI Design)</li><li>Canva · Illustrator / Photoshop</li><li>Tata letak visual &amp; poster infografis</li></ul><div class="bar"><i style="width:90%"></i></div></article>
-<article class="reveal skill-card"><span class="skill-no">~/03 — manage 🗂️</span><h3>Project &amp; Task Management</h3><ul><li>Notion — database &amp; workspace</li><li>Sprint &amp; task tracking</li><li>Dokumentasi teknis</li></ul><div class="bar"><i style="width:92%"></i></div></article>
-<article class="reveal skill-card"><span class="skill-no">~/04 — lead 🌷</span><h3>Soft Skills &amp; Leadership</h3><ul><li>Kesekretariatan &amp; tata kelola dokumen</li><li>Master of Ceremony (MC)</li><li>Koordinasi tim · Public speaking</li></ul><div class="bar"><i style="width:95%"></i></div></article>
+<div class="reveal flex flex-wrap items-end justify-between gap-4"><h2 class="font-display font-bold text-plum-700 text-3xl sm:text-5xl tracking-tight">Skillset manis <span class="grad-rose-text">saya.</span></h2><p class="text-plum-600/80 max-w-md text-sm sm:text-base">Pilih kategori — kartu ikut terfilter instan &amp; mulus. ✨</p></div>
+<div class="reveal filter-tabs" role="tablist" aria-label="Filter kategori keahlian">
+<button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">✨ Semua</button>
+<button class="filter-btn" data-filter="dev" role="tab" aria-selected="false">💻 Development</button>
+<button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">🤖 AI &amp; IoT</button>
+<button class="filter-btn" data-filter="design" role="tab" aria-selected="false">🎨 Design &amp; Marketing</button>
+<button class="filter-btn" data-filter="comm" role="tab" aria-selected="false">🎤 Speaking &amp; Org</button>
+</div>
+<div id="skills-grid" class="mt-8 grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
+<article class="reveal skill-card tilt" data-cat="dev"><span class="skill-no">~/01 — build 💻</span><h3>Mobile &amp; Web Development</h3><ul><li>Android Studio · XML Layout · Mobile UI</li><li>HTML5 · CSS3 · Tailwind CSS</li><li>Git &amp; GitHub Pages</li></ul><div class="bar"><i style="width:84%"></i></div></article>
+<article class="reveal skill-card tilt" data-cat="ai"><span class="skill-no">~/02 — intelligence 🤖</span><h3>AI, IoT &amp; Foundation Tech</h3><ul><li>Konsep AI &amp; ML dasar (SIC Stage 3)</li><li>Logika IoT &amp; sensor dasar</li><li>Algoritma &amp; computational thinking</li></ul><div class="bar"><i style="width:80%"></i></div></article>
+<article class="reveal skill-card tilt" data-cat="design"><span class="skill-no">~/03 — market 🎨</span><h3>Design &amp; Marketing</h3><ul><li>Figma · Canva · Illustrator/Photoshop</li><li>Strategi marketing TEFA</li><li>Media promosi &amp; infografis</li></ul><div class="bar"><i style="width:90%"></i></div></article>
+<article class="reveal skill-card tilt" data-cat="comm"><span class="skill-no">~/04 — voice 🎤</span><h3>Communication &amp; Soft Skills</h3><ul><li>Public speaking &amp; MC (event host)</li><li>Notion workspace &amp; task tracking</li><li>Administrasi &amp; kerjasama tim</li></ul><div class="bar"><i style="width:93%"></i></div></article>
 </div>
 </div>
 </section>
-
-<!-- PROJECTS -->
-<section id="projects" class="py-16 sm:py-24 scroll-mt-20">
+<section id="contact" class="py-16 sm:py-24 scroll-mt-20">
 <div class="max-w-6xl mx-auto px-4 sm:px-6">
-<div class="reveal sec-label"><span>03.</span> Portofolio Karya <i></i></div>
-<div class="reveal flex flex-wrap items-end justify-between gap-4"><h2 class="font-display font-bold text-plum-800 text-3xl sm:text-5xl tracking-tight">Karya <span class="grad-rose-text">pilihan.</span></h2><a class="link-more" href="https://github.com/nalleaa/" target="_blank" rel="noopener">Lihat semua di GitHub →</a></div>
-<div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-<article class="reveal proj-card">
-<div class="proj-cover pc1"><span class="proj-badge">📱 Mobile App</span><div class="pc-inner"><div class="pc-aa">Aa</div><div class="pc-sub">ALPHABET · FUN 🌸</div></div></div>
-<div class="proj-body"><h3>Alphabet Fun — Mobile Interactive App</h3><p>Aplikasi edukasi interaktif Android untuk anak-anak dengan layout XML responsif, audio-visual menarik, dan navigasi ramah anak.</p><div class="tags"><span class="tag-hot">Android Studio</span><span>XML UI</span><span>UI/UX</span><span>Mobile Dev</span></div><div class="proj-actions"><a href="https://github.com/nalleaa/" target="_blank" rel="noopener" class="btn-rose btn-sm">GitHub ↗</a><a href="#contact" class="btn-outline btn-sm">Tanya Detail</a></div></div>
-</article>
-<article class="reveal proj-card">
-<div class="proj-cover pc2"><span class="proj-badge">✦ SIC 2025</span><div class="pc-inner"><div class="pc-code">&lt;SIC /&gt; tech-project</div><div class="pc-sub">problem solving · teamwork 🌷</div></div></div>
-<div class="proj-body"><h3>Samsung Innovation Campus Tech Project</h3><p>Proyek pemecahan masalah nyata berbasis teknologi selama pelatihan SIC 2025 — kolaborasi tim dengan alur kerja terstruktur.</p><div class="tags"><span class="tag-hot">SIC 2025</span><span>Problem Solving</span><span>Project Mgmt</span><span>Notion</span></div><div class="proj-actions"><a href="https://github.com/nalleaa/" target="_blank" rel="noopener" class="btn-rose btn-sm">GitHub ↗</a><a href="#contact" class="btn-outline btn-sm">Tanya Detail</a></div></div>
-</article>
-<article class="reveal proj-card md:col-span-2 lg:col-span-1">
-<div class="proj-cover pc3"><span class="proj-badge">🎨 Design</span><div class="pc-inner"><div class="pc-paper"><i class="l1"></i><i class="l2"></i><i class="l3"></i><div class="pc-grid"><b></b><b></b><b></b></div><span>SPMB · INFOGRAFIS RESMI 🌸</span></div></div></div>
-<div class="proj-body"><h3>Desain Komunikasi &amp; Publikasi Resmi Sekolah</h3><p>Materi grafis resmi, poster infografis alur SPMB SMKN 2 Surakarta, dan konten media MPK dengan estetika komunikatif.</p><div class="tags"><span class="tag-hot">Graphic Design</span><span>Infographic</span><span>Vector Layout</span><span>Branding</span></div><div class="proj-actions"><a href="https://github.com/nalleaa/" target="_blank" rel="noopener" class="btn-rose btn-sm">GitHub ↗</a><a href="#contact" class="btn-outline btn-sm">Tanya Detail</a></div></div>
-</article>
-</div>
-<aside class="reveal github-banner">
-<div><h3>Ingin melihat repositori kode lainnya? 💗</h3><p>Kunjungi GitHub saya di <b>github.com/nalleaa</b> — semua eksperimen, latihan, dan proyek sekolah terdokumentasi di sana.</p></div>
-<a href="https://github.com/nalleaa/" target="_blank" rel="noopener" class="btn-white">Kunjungi GitHub ↗</a>
-</aside>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-16 sm:py-24 scroll-mt-20 sec-alt">
-<div class="max-w-6xl mx-auto px-4 sm:px-6">
-<div class="reveal sec-label"><span>04.</span> Kontak <i></i></div>
+<div class="reveal sec-label"><span>03.</span> Kontak <i></i></div>
 <div class="grid lg:grid-cols-2 gap-6 items-stretch">
 <div class="reveal card-rose p-8 sm:p-12">
-<h2 class="font-display font-bold text-plum-800 text-3xl sm:text-4xl leading-tight">Mari berkolaborasi dan menciptakan <span class="grad-rose-text">karya bersama! 💗</span></h2>
-<p class="mt-4 text-plum-600/90 text-[15px] leading-relaxed">Punya ide proyek kreatif, butuh bantuan desain UI, atau ingin berkolaborasi di kegiatan sekolah? Kotak masuk saya selalu terbuka.</p>
+<h2 class="font-display font-bold text-plum-700 text-3xl sm:text-4xl leading-tight">Mari berkolaborasi dan menciptakan <span class="grad-rose-text">karya bersama! 💗</span></h2>
+<p class="mt-4 text-plum-600/90 text-[15px] leading-relaxed">Butuh developer, MC, atau partner marketing untuk event &amp; produk digitalmu? Kotak masuk saya selalu terbuka.</p>
 <ul class="contact-list">
-<li><span class="c-ico">✉️</span><span><b>Email</b><a href="mailto:ininallea@gmail.com">ininallea@gmail.com</a></span></li>
+<li><span class="c-ico">✉️</span><span class="flex-1"><b>Email</b><span class="copy-row"><a id="email-link" href="mailto:ininallea@gmail.com">ininallea@gmail.com</a><button id="copy-email" type="button" data-email="ininallea@gmail.com" aria-label="Salin alamat email">⧉ Salin Email</button></span></span></li>
 <li><span class="c-ico">📸</span><span><b>Instagram</b><a href="https://instagram.com/nalnaew" target="_blank" rel="noopener">@nalnaew</a></span></li>
 <li><span class="c-ico">🐙</span><span><b>GitHub</b><a href="https://github.com/nalleaa/" target="_blank" rel="noopener">github.com/nalleaa</a></span></li>
 <li><span class="c-ico">📍</span><span><b>Domisili</b><em>Surakarta, Jawa Tengah, Indonesia</em></span></li>
@@ -171,10 +137,10 @@ tailwind.config = {
 </div>
 <form id="contact-form" class="reveal form-card" action="mailto:ininallea@gmail.com" method="post" enctype="text/plain">
 <div class="grid sm:grid-cols-2 gap-4">
-<div><label for="nama">Nama</label><input id="nama" name="nama" type="text" required placeholder="Nama kamu" /></div>
-<div><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="kamu@email.com" /></div>
+<div><label for="nama">Nama</label><input id="nama" name="nama" type="text" required placeholder="Nama kamu" autocomplete="name" /></div>
+<div><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="kamu@email.com" autocomplete="email" /></div>
 </div>
-<div><label for="subjek">Subjek</label><input id="subjek" name="subjek" type="text" placeholder="Kolaborasi / desain / lainnya" /></div>
+<div><label for="subjek">Subjek</label><input id="subjek" name="subjek" type="text" placeholder="Kolaborasi / MC / marketing / lainnya" /></div>
 <div><label for="pesan">Pesan</label><textarea id="pesan" name="pesan" rows="5" required placeholder="Ceritakan ide manismu..."></textarea></div>
 <button type="submit" class="btn-rose w-full justify-center">Kirim Pesan 💌</button>
 <p id="form-note" class="hidden form-note">✓ Pesan siap dikirim via aplikasi email kamu. Terima kasih! 🌸</p>
@@ -183,29 +149,15 @@ tailwind.config = {
 </div>
 </section>
 </main>
-
 <footer>
 <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
-<a href="#hero" class="font-display font-bold text-plum-700 text-lg">Nalasyifa A.<span class="dot-rose">.</span></a>
-<ul class="foot-nav"><li><a href="#hero">Beranda</a></li><li><a href="#about">Tentang</a></li><li><a href="#skills">Keahlian</a></li><li><a href="#projects">Proyek</a></li><li><a href="#contact">Kontak</a></li></ul>
-<p class="foot-copy">© 2026 Nalasyifa Amaranggana. All rights reserved. • Dibuat dengan cinta &amp; estetika rapi. 🌸</p>
+<a href="#hero" class="font-display font-bold text-plum-600 text-lg">Nalasyifa A.<span class="dot-rose">.</span></a>
+<ul class="foot-nav"><li><a href="#hero">Beranda</a></li><li><a href="#about">Tentang</a></li><li><a href="#skills">Keahlian</a></li><li><a href="#contact">Kontak</a></li></ul>
+<p class="foot-copy">© 2026 Nalasyifa Amaranggana. All rights reserved. • Dibuat dengan dedikasi &amp; estetika rapi. 🌸</p>
 </div>
 </footer>
+<div id="toast" role="status" aria-live="polite">✨ Email berhasil disalin ke clipboard!</div>
 <button id="to-top" aria-label="Kembali ke atas">↑</button>
-<script>
-const menuBtn=document.getElementById('menu-btn'),mobileMenu=document.getElementById('mobile-menu'),iconOpen=document.getElementById('icon-open'),iconClose=document.getElementById('icon-close');
-function toggleMenu(force){const show=force!==undefined?force:mobileMenu.classList.contains('hidden');mobileMenu.classList.toggle('hidden',!show);iconOpen.classList.toggle('hidden',show);iconClose.classList.toggle('hidden',!show);menuBtn.setAttribute('aria-expanded',show);}
-menuBtn.addEventListener('click',()=>toggleMenu());
-document.querySelectorAll('.m-link').forEach(a=>a.addEventListener('click',()=>toggleMenu(false)));
-const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}})},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-const navLinks=document.querySelectorAll('.nav-link');
-const secObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){navLinks.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-40% 0px -55% 0px'});
-['hero','about','skills','projects','contact'].forEach(id=>{const s=document.getElementById(id);if(s)secObs.observe(s);});
-const toTop=document.getElementById('to-top');
-window.addEventListener('scroll',()=>{toTop.classList.toggle('show',window.scrollY>600);},{passive:true});
-toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-document.getElementById('contact-form').addEventListener('submit',()=>{document.getElementById('form-note').classList.remove('hidden');});
-</script>
+<script src="script.js" defer></script>
 </body>
 </html>
